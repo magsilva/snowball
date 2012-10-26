@@ -239,6 +239,7 @@ dist_libstemmer_java: $(RUNTIME_SOURCES) $(RUNTIME_HEADERS) \
 	rm -rf $${dest} && \
 	rm -f $${dest}.tgz && \
 	mkdir -p $${dest} && \
+	cp -a pom.xml $${dest}/pom.xml && \
 	cp -a doc/libstemmer_java_README $${dest}/README && \
 	mkdir -p $${dest}/$(java_src_dir) && \
 	cp -a $(JAVA_SOURCES) $${dest}/$(java_src_dir) && \
