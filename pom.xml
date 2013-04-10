@@ -4,31 +4,14 @@
 
 	<groupId>org.tartarus</groupId>
 	<artifactId>snowball</artifactId>
-	<packaging>pom</packaging>
-	<version>20110629</version>
+	<packaging>jar</packaging>
+	<version>1.0.1</version>
 
 	<name>Snowball</name>
 	<inceptionYear>2002</inceptionYear>
 	<url>http://snowball.tartarus.org/</url>
 	<description>Snowball is a small string processing language designed for creating stemming algorithms for use in Information Retrieval.</description>
 	
-	<distributionManagement>
-		<repository>
-			<id>IroniaCorp</id>
-			<url>http://www.ironiacorp.com/repo/maven2/stable</url>
-		</repository>
-	</distributionManagement>
-
-	<repositories>
-		<repository>
-			<id>central</id>
-			<url>http://repo1.maven.org/maven2/</url>
-			<releases>
-				<updatePolicy>never</updatePolicy>
-			</releases>
-		</repository>
-	</repositories>
-
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -60,40 +43,6 @@
 					<maxmem>512m</maxmem>
 					<source>1.6</source>
 					<target>1.6</target>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<configuration>
-					<archive>
-						<index>true</index>
-						<manifest>
-							<addClasspath>true</addClasspath>
-							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>org.tartarus.snowball.TestApp</mainClass>
-						</manifest>
-					</archive>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<configuration>
-					<archive>
-						<index>true</index>
-						<manifest>
-							<mainClass>org.tartarus.snowball.TestApp</mainClass>
-						</manifest>
-					</archive>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
 				</configuration>
 			</plugin>
 		</plugins>			
