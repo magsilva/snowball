@@ -25,8 +25,8 @@ public class TestApp {
         }
 
 	Class stemClass = Class.forName("org.tartarus.snowball.ext." +
-					args[0] + "Stemmer");
-        SnowballStemmer stemmer = (SnowballStemmer) stemClass.newInstance();
+			args[0] + "Stemmer");
+SnowballStemmer stemmer = (SnowballStemmer) stemClass.newInstance();
 
 	Reader reader;
 	reader = new InputStreamReader(new FileInputStream(args[1]));
